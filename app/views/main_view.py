@@ -22,5 +22,5 @@ def index():
 
 @app.route('/res',methods=['GET'])
 def result():
-    return send_file('app/static/res.png')
+    return send_file('static/res.png', mimetype='image/gif')
 
