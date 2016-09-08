@@ -2,5 +2,4 @@
 # app.run()
 
 from app import colorize as c
-c.image_overlay('app/static/res.png')
-c.merge('app/static/res.png','app/static/res.png',(50,50)).save('merge_res.png')
+c.merge(c.image_overlay('app/static/res.png','255,0,0'),'app/static/res.png',(50,50)).save('app/static/color_merge_res.png')
