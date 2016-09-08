@@ -30,3 +30,10 @@ def image_multiply(src, color):
     res = ImageChops.multiply(hair, color)
     res = Image.composite(res, white_col, hair)
     return res
+
+
+def merge(fimage_src, simage_src, position):
+    first_img = Image.open(fimage_src)
+    second_img = Image.open(simage_src)
+    first_img.paste(second_img,position,second_img)
+    return first_img
